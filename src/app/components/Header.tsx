@@ -1,9 +1,10 @@
 import React from 'react'
+import AppBar from 'material-ui/AppBar';
 
 export default (props) => {
     return (
-        <header className="Header">
-            Header
-        </header>
+        <AppBar
+            title="Memo"
+        />
     );
 }

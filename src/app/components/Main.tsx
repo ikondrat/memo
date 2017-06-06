@@ -22,7 +22,6 @@ class Main extends React.Component<Props, State> {
                 <div>
                     <Header/>
                     <Content/>
-                    <Footer/>
                 </div>
             </MuiThemeProvider>
         );
