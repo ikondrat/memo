@@ -5,5 +5,5 @@ export default (props) => {
         <footer className="footer">
             footer
         </footer>
-    );
+    )
 }

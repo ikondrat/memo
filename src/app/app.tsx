@@ -1,23 +1,24 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import injectTapEventPlugin from 'react-tap-event-plugin'
+
 import Main from 'app/components/Main'
+import injectTapEventPlugin from 'react-tap-event-plugin'
 
 const data = {
-    title: "ololo",
+    title: 'ololo',
     wordSets: [
         {
-            title: "Cards1",
+            title: 'Cards1',
             list: [
 
-            ]
-        }
-    ]
-};
+            ],
+        },
+    ],
+}
 
 // Needed for onTouchTap
 // Check this repo:
 // https://github.com/zilverline/react-tap-event-plugin
-injectTapEventPlugin();
+injectTapEventPlugin()
 
-ReactDOM.render(<Main words={data}/>, document.getElementById('app'));
+ReactDOM.render(<Main words={data}/>, document.getElementById('app'))

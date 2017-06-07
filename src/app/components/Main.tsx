@@ -1,22 +1,24 @@
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import React from 'react'
-import {MuiThemeProvider} from "material-ui/styles";
-import Header from "./Header";
-import Content from "./Content";
-import Footer from "./Footer";
+
+import Content from './Content'
+import Footer from './Footer'
+import Header from './Header'
 
 interface Props {
-    words: any;
+    words: any
 }
 
 interface State {
+    test: string
 }
 
 class Main extends React.Component<Props, State> {
     constructor(props) {
-        super(props);
+        super(props)
     }
 
-    render() {
+    public render() {
         return (
             <MuiThemeProvider>
                 <div>
@@ -24,8 +26,8 @@ class Main extends React.Component<Props, State> {
                     <Content/>
                 </div>
             </MuiThemeProvider>
-        );
+        )
     }
 }
 
-export default Main;
+export default Main
