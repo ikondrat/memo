@@ -6,10 +6,10 @@ module.exports = {
   devtool: 'eval',
   // Entry points to the project
   entry: [
-    './src/app/app.tsx'
+    './src/examples/counter/index.tsx'
   ],
   output: {
-    filename: 'app.js',
+    filename: 'index.js',
     publicPath: 'dist',
     path: path.resolve('dist')
   },
