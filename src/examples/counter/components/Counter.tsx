@@ -2,10 +2,6 @@ import React, { Component } from 'react'
 import {RaisedButton, Paper} from 'material-ui'
 import styled from 'styled-components';
 
-const style = {
-    margin: 12,
-};
-
 const StyledButton = styled(RaisedButton)`
     margin: 20px
 `;
@@ -13,10 +9,10 @@ const StyledPaper = styled(Paper)`
     padding: 10px 20px;
 `;
 
-
 interface Props {
-    value: number
-    onIncrement()
+    value: number,
+    l10n: any,
+    onIncrement(),
     onDecrement()
 }
 
@@ -27,6 +23,7 @@ interface State {
 class Counter extends Component<Props, State> {
     constructor(props) {
         super(props);
+
         this.incrementAsync = this.incrementAsync.bind(this);
         this.incrementIfOdd = this.incrementIfOdd.bind(this);
     }
@@ -42,14 +39,14 @@ class Counter extends Component<Props, State> {
     }
 
     render() {
-        const { value, onIncrement, onDecrement } = this.props
+        const { l10n, value, onIncrement, onDecrement } = this.props
         return (
-            <StyledPaper zDepth={2} rounded={false} >
-                Clicked: {value} times
-                <StyledButton label="+" style={style} onClick={onIncrement}/>
-                <StyledButton label="-" style={style} onClick={onDecrement}/>
-                <StyledButton label="Increment if odd" style={style} onClick={this.incrementIfOdd}/>
-                <StyledButton label="Increment async" style={style} onClick={this.incrementAsync}/>
+            <StyledPaper zDepth={2} rounded={false}>
+                {l10n.clicked}: {value} {l10n.times}
+                <StyledButton label={l10n.plus} onClick={onIncrement}/>
+                <StyledButton label={l10n.minus} onClick={onDecrement}/>
+                <StyledButton label={l10n.oddOnly} onClick={this.incrementIfOdd}/>
+                <StyledButton label={l10n.asyncAdd} onClick={this.incrementAsync}/>
             </StyledPaper>
         )
     }

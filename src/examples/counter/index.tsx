@@ -16,11 +16,20 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 // https://github.com/zilverline/react-tap-event-plugin
 injectTapEventPlugin()
 
+const l10n = {
+    "plus" : "+",
+    "minus": "-",
+    "oddOnly": "Increment if odd",
+    "asyncAdd": "Increment async",
+    "clicked": "Clicked",
+    "times": "times"
+};
 
 const render = () => ReactDOM.render(
     <MuiThemeProvider>
         <div>
             <Counter
+                l10n={l10n}
                 value={store.getState()}
                 onIncrement={() => store.dispatch({ type: 'INCREMENT' })}
                 onDecrement={() => store.dispatch({ type: 'DECREMENT' })}
